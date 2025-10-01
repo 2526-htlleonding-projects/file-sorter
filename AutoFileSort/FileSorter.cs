@@ -4,7 +4,7 @@ public static class FileSorter
 {
     public static string? TargetFolder;
 
-    public static void SetupFolders()
+    private static void SetupFolders()
     {
         //see all file types
         var fileExtensions = GetAllFiletypesFromTarget();
@@ -52,6 +52,8 @@ public static class FileSorter
 
     public static void Sort(string filename = "")
     {
+        SetupFolders();
+        
         //if filename == "" -> sort every file; else sort file filename
         if (filename == "")
         {
