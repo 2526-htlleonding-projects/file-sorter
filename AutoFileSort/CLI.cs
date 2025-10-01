@@ -1,3 +1,4 @@
+/*
 namespace AutoFileSort;
 
 public static class CLI
@@ -9,3 +10,4 @@ public static class CLI
         return input.Trim();
     }
 }
+*/

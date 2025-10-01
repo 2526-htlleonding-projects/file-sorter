@@ -8,10 +8,15 @@ namespace AutoFileSort
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            if (args.Length < 2)
+            {
+                Console.WriteLine("Usage: AutoFileSort.exe <target dir>");
+                return;
+            }
+            Console.WriteLine("Welcome to the Auto File Sort!");
             
             // Get the target folder
-            var target = CLI.GetTargetFolderFromUser();
+            var target = args[1];
             FileSorter.TargetFolder = target;
             
             // Set up the target folder
